@@ -1,10 +1,10 @@
-- Week 2.2 learnings =>
+## Week 2.2 learnings =>
     - Node.js and its runtime
     - Backend communication portocols 
     - Express.js basic
     - Routes , status codes 
 
-- Week 2.5 - express basics
+## Week 2.5 - express basics
     - Request methods
         1. GET - 
         2. POST - posing something
