@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://dhanrajhuli8762:Sj0ZGro2pYFFkJxX@cluster0.v7ki5i1.mongodb.net/userappnew")
+mongoose.connect("URI")
 // CONNECTION URL/TABLE NAME
 
 //Schema of a table 
