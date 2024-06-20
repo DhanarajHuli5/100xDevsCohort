@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://dhanrajhuli8762:Sj0ZGro2pYFFkJxX@cluster0.v7ki5i1.mongodb.net/userappnew")
+mongoose.connect("URI")
 
 const User = mongoose.model("User", {  // schema
   name: String,
