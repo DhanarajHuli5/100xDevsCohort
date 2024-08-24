@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <script>
+      let timeout;
+      function debounceCalculateSum() { 
+        // delay the call to calculateSum until ive not been called for 100sm
+        clearTimeout(timeout);
+        timeout = setTimeout(function(){
+          calculateSum()
+        },1000)
+      }
+
+      function calculateSum() {
+        const a = document.getElementById("first").value;
+        const b = document.getElementById("second").value;
+        const ans = document.getElementById("finalSum");
+        //fetch
+        fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b);
+
+        //ans.innerHTML = a+b; // string
+        // ans.innerHTML = parseInt(a) + parseInt(b); // string to number i.e "111" => 111
+      }
+    </script>
+
+    <div style="text-align: center; display: block">
+      <input
+        oninput="debounceCalculateSum()"
+        id="first"
+        type="text"
+        placeholder="Enter Number"
+      />
+      <br />
+      <br />
+      <input
+        oninput="debounceCalculateSum()"
+        id="second"
+        type="text"
+        placeholder="Enter Number"
+      />
+      <br />
+      <br />
+
+      <br />
+      <div id="finalSum"></div>
+    </div>
+  </body>
+</html>
